@@ -9,6 +9,7 @@ PURPLE='\033[4;34m'
 NC='\033[0m' # no color
 WIDTH=$(tput cols) # size of terminal window.
 ERR='^[1-4]+$' # validation check.
+PATH3="$1"
 
 clear_screen() {
     echo -en '\033c'
@@ -61,8 +62,14 @@ check_yaml() {
     ansible-playbook "$FLAG" "$1"
 }
 
-
-start_page
+if [[ ! -z "$PATH3" ]]
+then
+    yamllint "$PATH3"
+    ansible-playbook "$FLAG" "$PATH3"
+    exit 0
+else
+    start_page
+fi    
 
 if [ "$CHOOSE_PATH" == 1 ]
 then
