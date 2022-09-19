@@ -8,7 +8,7 @@ FLAG='--syntax-check'
 PURPLE='\033[4;34m'
 NC='\033[0m' # no color
 WIDTH=$(tput cols) # size of terminal window.
-ERR='^[1-4]+$' # validation check.
+ERR='^[1-4]$' # validation check.
 PATH3="$1"
 
 clear_screen() {
@@ -62,7 +62,7 @@ check_yaml() {
     ansible-playbook "$FLAG" "$1"
 }
 
-if [[ ! -z "$PATH3" ]]
+if [[ -n "$PATH3" ]]
 then
     yamllint "$PATH3"
     ansible-playbook "$FLAG" "$PATH3"
