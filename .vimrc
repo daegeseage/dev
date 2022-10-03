@@ -21,6 +21,7 @@ colorscheme blackboard
 call plug#begin('~/.vim/bundle')
 Plug 'itchyny/lightline.vim'
 Plug 'pbondoer/vim-42header'
+Plug 'ntpeters/vim-better-whitespace'
 call plug#end()
 
 " adding username and mail for 42header
