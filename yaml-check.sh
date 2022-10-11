@@ -69,7 +69,7 @@ then
     exit 0
 else
     start_page
-fi    
+fi
 
 if [ "$CHOOSE_PATH" == 1 ]
 then

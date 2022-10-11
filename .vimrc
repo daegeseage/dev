@@ -10,10 +10,9 @@ set mouse=
 set ttymouse=
 set backspace=indent,eol,start
 syntax on
-set shiftwidth=4
 set tabstop=4
+set shiftwidth=4
 set expandtab
-set softtabstop=4
 set background=dark
 colorscheme blackboard
 
@@ -22,6 +21,7 @@ call plug#begin('~/.vim/bundle')
 Plug 'itchyny/lightline.vim'
 Plug 'pbondoer/vim-42header'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'hashivim/vim-terraform'
 call plug#end()
 
 " adding username and mail for 42header
